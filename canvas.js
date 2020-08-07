@@ -1,6 +1,6 @@
 "use strict";
 
-const you = document.querySelector(".you");
+let you = document.querySelector(".you");
 const universe = document.querySelector(".universe");
 
 let first = true;
@@ -14,7 +14,7 @@ you.style.position = "fixed";
 you.style.left = `${x}px`;
 you.style.top = `${y}px`;
 
-you.addEventListener("mouseover", function () {
+function found() {
   you.style.transform = "scale(8)";
   if (first) {
     setTimeout(function () {
@@ -22,22 +22,17 @@ you.addEventListener("mouseover", function () {
     }, 2000);
     first = !first;
   }
-});
+}
 
-you.addEventListener("touchstart", function () {
-  you.style.transform = "scale(8)";
-  if (first) {
-    setTimeout(function () {
-      window.alert("FOUND!");
-    }, 2000);
-    first = !first;
-  }
-});
-
+// p5 setup
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   ellipseMode(CENTER);
   cnv.parent(universe);
+  let you = createImg("star.png", "star");
+  you.position(x, y);
+  you.style("width", "40px");
+  you.style("height", "40px");
 }
 
 function windowResized() {
@@ -47,5 +42,13 @@ function windowResized() {
 function draw() {
   noStroke();
   fill("rgba(255, 255, 255, 0.9)");
-  ellipse(mouseX, mouseY, 2, 2);
+  ellipse(mouseX, mouseY, 3, 3);
+  if (
+    x + 10 <= mouseX &&
+    x + 30 >= mouseX &&
+    y + 10 <= mouseY &&
+    y + 30 >= mouseY
+  ) {
+    found();
+  }
 }

@@ -16,12 +16,22 @@ you.style.top = `${y}px`;
 
 you.addEventListener("mouseover", function () {
   you.style.transform = "scale(8)";
-  // if (first) {
-  //   setTimeout(function () {
-  //     window.alert("FOUND!");
-  //   }, 2000);
-  //   first = !first;
-  // }
+  if (first) {
+    setTimeout(function () {
+      window.alert("FOUND!");
+    }, 2000);
+    first = !first;
+  }
+});
+
+you.addEventListener("touchstart", function () {
+  you.style.transform = "scale(8)";
+  if (first) {
+    setTimeout(function () {
+      window.alert("FOUND!");
+    }, 2000);
+    first = !first;
+  }
 });
 
 function setup() {

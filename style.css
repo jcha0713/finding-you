@@ -1,9 +1,9 @@
 html {
   background-color: black;
+  overflow: hidden;
 }
 
 .universe {
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-color: black;

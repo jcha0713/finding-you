@@ -27,7 +27,6 @@ function found() {
 // p5 setup
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
-  ellipseMode(CENTER);
   cnv.parent(universe);
   let you = createImg("star.png", "star");
   you.position(x, y);

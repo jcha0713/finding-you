@@ -36,7 +36,7 @@ function setup() {
   you.style("left", `${x}px`);
   you.style("top", `${y}px`);
   setTimeout(function () {
-    you.style("transition", "3s ease-out");
+    you.style("transition", "2s ease-out");
     you.style("opacity", "1");
   }, 3000);
 }

@@ -1,16 +1,16 @@
 "use strict";
-const universe = document.querySelector(".universe");
 
+const universe = document.querySelector(".universe");
+const universeImg = document.querySelector(".universe-img");
+
+let cnv;
 let first = true;
 let x = Math.floor(Math.random() * window.innerWidth);
 let y = Math.floor(Math.random() * window.innerHeight);
 
-// you.style.width = "40px";
-// you.style.height = "40px";
-// you.style.borderRadius = "50%";
-// you.style.position = "fixed";
-// you.style.left = `${x}px`;
-// you.style.top = `${y}px`;
+setTimeout(function () {
+  universeImg.style.opacity = "1";
+}, 3000);
 
 function found() {
   const star = document.querySelector(".you");
@@ -23,10 +23,9 @@ function found() {
   }
 }
 
-// p5 setup
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
-  cnv.parent(universe);
+  cnv = createCanvas(windowWidth, windowHeight);
+  cnv.position(0, 0);
   let you = createImg("star.png", "star");
   you.addClass("you");
   you.position(x, y);
@@ -36,6 +35,10 @@ function setup() {
   you.style("position", "fixed");
   you.style("left", `${x}px`);
   you.style("top", `${y}px`);
+  setTimeout(function () {
+    you.style("transition", "3s ease-out");
+    you.style("opacity", "1");
+  }, 3000);
 }
 
 function windowResized() {

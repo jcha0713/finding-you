@@ -7,12 +7,19 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: black;
-  background-image: url("universe.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.universe img {
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 6s ease-out;
 }
 
 .you {
   transform: scale(1);
-  transition: 2s;
+  opacity: 0;
 }

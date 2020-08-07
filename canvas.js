@@ -7,6 +7,9 @@ let cnv;
 let first = true;
 let x = Math.floor(Math.random() * window.innerWidth);
 let y = Math.floor(Math.random() * window.innerHeight);
+let r = Math.floor(Math.random() * 120);
+let g = Math.floor(Math.random() * 70);
+let b = Math.floor(Math.random() * 70);
 
 setTimeout(function () {
   universeImg.style.opacity = "1";
@@ -47,7 +50,7 @@ function windowResized() {
 
 function draw() {
   noStroke();
-  fill("rgba(255, 255, 255, 0.9)");
+  fill(`rgba(${r}, ${g}, ${b}, 0.9)`);
   ellipse(mouseX, mouseY, 3, 3);
   if (
     x + 10 <= mouseX &&

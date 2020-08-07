@@ -17,7 +17,7 @@ function found() {
   star.style.transform = "scale(8)";
   if (first) {
     setTimeout(function () {
-      window.alert("FOUND!");
+      window.alert("");
     }, 2000);
     first = !first;
   }

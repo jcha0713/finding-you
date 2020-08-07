@@ -1,0 +1,18 @@
+html {
+  background-color: black;
+}
+
+.universe {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-image: url("universe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.you {
+  transform: scale(1);
+  transition: 2s;
+}

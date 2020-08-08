@@ -20,7 +20,7 @@ function found() {
   star.style.transform = "scale(8)";
   if (first) {
     setTimeout(function () {
-      window.alert("");
+      window.alert("空");
     }, 2000);
     first = !first;
   }
@@ -39,7 +39,7 @@ function setup() {
   you.style("left", `${x}px`);
   you.style("top", `${y}px`);
   setTimeout(function () {
-    you.style("transition", "2s ease-out");
+    you.style("transition", "6s ease-out");
     you.style("opacity", "1");
   }, 3000);
 }
@@ -51,7 +51,7 @@ function windowResized() {
 function draw() {
   noStroke();
   fill(`rgba(${r}, ${g}, ${b}, 0.9)`);
-  ellipse(mouseX, mouseY, 3, 3);
+  ellipse(mouseX, mouseY, 10, 10);
   if (
     x + 10 <= mouseX &&
     x + 30 >= mouseX &&

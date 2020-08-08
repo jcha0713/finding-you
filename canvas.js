@@ -32,8 +32,8 @@ function setup() {
   let you = createImg("star.png", "star");
   you.addClass("you");
   you.position(x, y);
-  you.style("width", "40px");
-  you.style("height", "40px");
+  you.style("width", "45px");
+  you.style("height", "45px");
   you.style("border-radius", "50%");
   you.style("position", "fixed");
   you.style("left", `${x}px`);

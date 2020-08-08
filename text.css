@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "chohaeng";
+  src: url(chohaeng.otf);
+  font-display: swap;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-family: "chohaeng";
+  word-break: keep-all;
+  margin: 40px 0;
+  width: 70vw;
+  height: 100vh;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 2.3;
+}
+
+.link {
+  margin: 100px 0;
+}
+
+.link a {
+    text-decoration: underline;
+    color: white;
+}
+
+.link a:hover {
+  color: greenyellow;
+}

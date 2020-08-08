@@ -51,7 +51,7 @@ function windowResized() {
 function draw() {
   noStroke();
   fill(`rgba(${r}, ${g}, ${b}, 0.9)`);
-  ellipse(mouseX, mouseY, 10, 10);
+  ellipse(mouseX, mouseY, 7, 7);
   if (
     x + 10 <= mouseX &&
     x + 30 >= mouseX &&
